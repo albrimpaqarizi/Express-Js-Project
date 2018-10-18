@@ -3,11 +3,11 @@ In this project is a form where you can save new online contracts.
 
 
 
-Store API with Expressjs and MongoDB
-#Boilerplate for building simple API with Expressjs and MongoDB
+<h2>Store API with Expressjs and MongoDB</h2>
+<h2>Boilerplate for building simple API with Expressjs and MongoDB</h2>
 
 <h3>How to install in local environment</h3>
-
+<hr>
 <h4>In terminal write the following commands:</h4>
 <ol> 
   <li>cd Desktop</li>
