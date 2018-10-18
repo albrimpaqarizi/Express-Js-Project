@@ -1,0 +1,90 @@
+<!DOCTYPE html>
+
+<html>
+    
+    <head>
+      <title>Techstitution</title>
+      <script type="text/javascript" src="/main.js"></script>
+      <!-- Required meta tags -->
+      <meta charset="utf-8">
+      <meta name="viewport" content="width=device-width, initial-scale=1">
+        
+      <!-- Bootstrap -->
+      <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.1.3/css/bootstrap.min.css" integrity="sha384-MCw98/SFnGE8fJT3GXwEOngsV7Zt27NXFoaoApmYm81iuXoPkFOJwJ8ERdknLPMO" crossorigin="anonymous">
+       
+   </head>
+
+    <body>
+<style>
+    
+#emri-tabeles{
+    font-size: 50px;
+    color: dodgerblue;
+}
+    
+#tabela-kontrata{
+   overflow-x: auto;
+}
+
+   table {
+    font-size: 12px;
+}
+    
+</style>
+
+<div class="container">
+          <!-- Content here -->
+              <div class="row">
+                
+                <div class="col-12">
+                    
+                     <h1 id="emri-tabeles">Te gjitha kontratat e ruajtura</h1>
+                     
+                  <div class="table-responsive-lg" id="tabela-kontrata">
+                      
+                      <table class="table  table-striped table-bordered">
+                       <thead>
+                         <tr>
+                           <th scope="col">Nr. rendor i prokurimit</th>
+                           <th scope="col">Lloji i prokurimit</th>
+                           <th scope="col">Aktiviteti i prokurimit</th>
+                           <th scope="col">Data e inicimit te aktivitetit te prokurimit</th>
+                           <th scope="col">Data e publikimit te shpalljes</th>
+                           <th scope="col">Data e nenshkrimit te kontrates</th>
+                           <th scope="col">Afatet per implementimin e kontrates</th>
+                           <th scope="col">Data e permbylljes se kontrates</th>
+                           <th scope="col">Qmimi i kontrates</th>
+                           <th scope="col">Qmimi total i paguar per kontraten</th>
+                           <th scope="col">Emri i te cilit eshte dhene kontrata</th>     
+                        </tr>
+                      </thead>
+                      <tbody>
+                        <tr>
+                                <td><%= doc.nrRendor %></td>
+                                <td><%= doc.llojiProkurimit %></td>
+                                <td><%= doc.aktivitetiProkurimit %></td>
+                                <td><%= doc.dataInicimit %></td>
+                                <td><%= doc.dataPublikimit %></td>
+                                <td><%= doc.dataNenshkrimit %></td>
+                                <td><%= doc.dataPare %> - <%= doc.dataDyte %></td>
+                                <td><%= doc.dataPermbylljes %></td>
+                                <td><%= doc.qmimiKontrates %>€</td>
+                                <td><%= doc.qmimiTotal %>€</td>
+                                <td><%= doc.emridheMbiemri %></td> 
+                        </tr>
+                       </tbody>
+                   </table>
+                      
+                   
+                  </div>  
+                    
+                </div>
+                  
+             </div>
+                  
+          </div>
+  
+
+     </body>
+  
+</html>

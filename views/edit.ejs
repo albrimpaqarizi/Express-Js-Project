@@ -1,0 +1,177 @@
+
+
+<!DOCTYPE html>
+
+<html>
+    
+    <head>
+      <title>Techstitution</title>
+      <script type="text/javascript" src="/main.js"></script>
+      <!-- Required meta tags -->
+      <meta charset="utf-8">
+      <meta name="viewport" content="width=device-width, initial-scale=1">
+        
+      <!-- Bootstrap -->
+      <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.1.3/css/bootstrap.min.css" integrity="sha384-MCw98/SFnGE8fJT3GXwEOngsV7Zt27NXFoaoApmYm81iuXoPkFOJwJ8ERdknLPMO" crossorigin="anonymous">
+      
+   </head>
+
+    <body>    
+    
+    <style>
+        
+.container{
+    margin-top: 50px;
+    margin-bottom: 100px;
+}
+
+#emri-formes{
+    font-size: 50px;
+    color: dodgerblue;
+}
+
+
+#nentitulli-1 , #nentitulli-2 , #nentitulli-3 {
+    font-size: 32px;
+    color: black;
+}
+                         
+
+label{
+    font-size: 18px;
+}
+
+#afatet-label{
+    padding-left: 5px;
+}
+
+#button-submit {
+    text-transform: uppercase;
+}
+
+#data-publikimit{
+    padding-left: 0px;
+}
+
+    </style>
+    
+
+    <div class="container">
+          <!-- Content here -->
+              <div class="row">
+                  
+                  <div class="col-xs-12 col-sm-1 col-md-2 col-lg-3 col-xl-3"></div> 
+                
+                <div class="col-xs-12 col-sm-10 col-md-8 col-lg-6 col-xl-6">
+                     <h1 id="emri-formes">Ndrysho kontraten</h1>
+                    
+                     <form method="POST" action="/todos/update/<%= doc._id %>">
+                         <h3 id="nentitulli-1">Prokurimi:</h3>
+                         
+                      <div class="form-row">  
+                        <div class="form-group col-sm-6 col-md-6" >
+                           <label for="input-nr-rendor">Nr. rendor i prokurimit</label>
+                            <input type="number" class="form-control" name="nrRendor" value="<%= doc.nrRendor %>" id="input-nr-rendor"  placeholder="Nr. rendor i prokurimit" min="1" max="100">
+                        </div> 
+                         
+                         <div class="form-group col-sm-6 col-md-6">
+                           <label for="input-lloji-i-prokurimit">Lloji i prokurimit</label>
+                            <input type="text" class="form-control"  name="llojiProkurimit" value="<%= doc.llojiProkurimit %>" id="input-lloji-i-prokurimit"  placeholder="Lloji i prokurimit">
+                        </div> 
+                    </div>       
+                         
+                         <div class="form-group">
+                           <label for="input-aktiviteti-i-prokurimit">Aktiviteti i prokurimit</label><br>
+                            <input type="text" class="form-control"  name="aktivitetiProkurimit" value="<%= doc.aktivitetiProkurimit %>" id="input-aktiviteti-i-prokurimit" placeholder="Aktiviteti i prokurimit">
+                        </div> 
+                         
+                         
+                         <br><h3 id="nentitulli-2">Datat:</h3><br>
+                         
+                     <div class="form-row">       
+                        <div class="form-group col-sm-6 col-md-6">
+                           <label for="input-data-inicimit">Data e inicimit te aktivitetit te prokurimit</label>
+                            <input type="date" class="form-control" name="dataInicimit" value="<%= doc.dataInicimit %>" id="input-data-inicimit"  placeholder="03.03.2018">
+                        </div> 
+                         
+                         <div class="form-group col-sm-6 col-md-6">
+                          <div class="col-sm-8" id="data-publikimit">      
+                           <label for="input-data-publikimit">Data e publikimit te shpalljes</label>
+                             </div>
+                            <input type="date" class="form-control" name="dataPublikimit" value="<%= doc.dataPublikimit %>" id="input-data-publikimit" placeholder="03.03.2018">
+                        </div> 
+                     </div> 
+                         
+                         <div class="form-group">
+                           <label for="input-data-nenshkrimit">Data e nenshkrimit te kontrates</label>
+                            <input type="date" class="form-control" name="dataNenshkrimit" value="<%= doc.dataNenshkrimit %>" id="input-data-nenshkrimit"  placeholder="03.03.2018">
+                        </div> 
+                         
+                       <div class="form-row"> 
+                           <div class="col-sm-12">
+                           <label for="afatet-data-1 afatet-data-2" id="afatet-label">Afatet per implementimin e kontrates</label>
+                            </div>
+                           <div class="form-group col-6">
+                            <input type="date" class="form-control" name="dataPare" value="<%= doc.dataPare %>" id="afatet-data-1"  placeholder="03.03.2018">
+                          </div> 
+                           
+                           <div class="form-group col-6">
+                            <input type="date" class="form-control" name="dataDyte" value="<%= doc.dataDyte %>" id="afatet-data-2"  placeholder="03.03.2018">
+                          </div> 
+                       </div>       
+                         
+                         <div class="form-group">
+                           <label for="data-permbylljes-kontrates">Data e permbylljes se kontrates (data e pranimit te perkohshem/preliminar)</label>
+                            <input type="date" class="form-control"  name="dataPermbylljes" value="<%= doc.dataPermbylljes %>" id="data-permbylljes-kontrates"  placeholder="03.03.2018">
+                        </div> 
+                         
+                         
+                         <br><h3 id="nentitulli-3">Qmimi dhe te dhenat tjera:</h3><br>
+                         
+                      <div class="form-row">     
+                        <div class="form-group col-sm-6 col-md-6">
+                           <label for="input-qmimi-i-kontrates">Qmimi i kontrates (duke perfshire te gjitha taksat)</label>
+                            <input type="number" class="form-control" name="qmimiKontrates" value="<%= doc.qmimiKontrates %>" id="input-qmimi-i-kontrates"  placeholder="Qmimi i kontrates">
+                        </div> 
+                         
+                         <div class="form-group col-sm-6 col-md-6">
+                              <label for="input-qmimi-total">Qmimi total i paguar per kontraten</label>
+                            <input type="number" class="form-control" name="qmimiTotal" value="<%= doc.qmimiTotal %>" id="input-qmimi-total"  placeholder="Qmimi total">
+                        </div> 
+                       </div>      
+                         
+                         <div class="form-group" >
+                           <label for="emri-mbiemri">Emri i te cilit eshte dhene kontrata</label><br>
+                            <input type="text" class="form-control" name="emridheMbiemri" value="<%= doc.emridheMbiemri %>" id="emri-mbiemri" placeholder="Emri dhe Mbiemri">
+                        </div>
+                         
+                         <div class="form-row">     
+                        <div class="btn-group col-6" >
+                            <button type="submit" class="btn btn-primary col-12" id="button-submit">Update</button>
+                        </div> 
+                         
+                         
+                       </div>
+                            
+                     </form>
+                    
+                </div>
+                
+                <div class="col-xs-12 col-sm-1 col-md-2 col-lg-3 col-xl-3">
+                     
+                </div> 
+               
+             </div>
+          </div>
+        
+           <!-- jQuery library -->
+           <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
+
+           <!-- Latest compiled JavaScript -->
+           <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js"></script>
+
+
+
+     </body>
+  
+</html>
