@@ -14,4 +14,7 @@ In this project is a form where you can save new online contracts.
   <li>cd store-api</li>
   <li>npm install</li>
   <li>npm start (or nodemon)</li>
+  <li>open browser</li>
+  <li>in URL write ( localhost:3000 )</li>
+  <li>#enter and you are HOME PAGE</li>
   </ol>
