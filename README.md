@@ -10,8 +10,8 @@ In this project is a form where you can save new online contracts.
 <p>In terminal write the following commands:</p>
 <ol> 
   <li>cd Desktop</li>
-  <li>git clone https://github.com/arianithetemi/store-api.git</li>
-  <li>cd store-api</li>
+  <li>git clone https://github.com/albrimpaqarizi/root</li>
+  <li>cd root</li>
   <li>npm install</li>
   <li>npm start (or nodemon)</li>
   <li>open browser</li>
