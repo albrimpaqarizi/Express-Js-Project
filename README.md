@@ -6,8 +6,8 @@ In this project is a form where you can save new online contracts.
 Store API with Expressjs and MongoDB
 Boilerplate for building simple API with Expressjs and MongoDB
 
-How to install in local environment
-In terminal write the following commands:
+<h3>How to install in local environment</h3><hr>
+<h5>In terminal write the following commands:</h5>
 <ol> 
   <li>cd Desktop</li>
   <li>git clone https://github.com/arianithetemi/store-api.git</li>
