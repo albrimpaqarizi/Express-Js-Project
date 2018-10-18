@@ -8,9 +8,10 @@ Boilerplate for building simple API with Expressjs and MongoDB
 
 How to install in local environment
 In terminal write the following commands:
-<ul> 
+<ol> 
   <li>cd Desktop</li>
-git clone https://github.com/arianithetemi/store-api.git
-cd store-api
-npm install
-npm start (or nodemon)
+  <li>git clone https://github.com/arianithetemi/store-api.git</li>
+  <li>cd store-api</li>
+  <li>npm install</li>
+  <li>npm start (or nodemon)</li>
+  </ol>
